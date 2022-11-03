@@ -28,9 +28,10 @@ print(message)
 #I have a lot of boxes of eggs in my fridge and I want to calculate how many omelettes I can make. Write a program to calculate this.
 #Assume that a box of eggs contains six eggs and I need four eggs for each omelette, but I should be able to easily change these values if I want. The output should say something like "You can make 9 omelettes with 6 boxes of eggs".
 
+import math
 num_of_omelette = int(input("Enter number of omelette: "))
 box_eggs = 6
 eggs_for_a_omelette = 4
-tot_egg_box = round((num_of_omelette * eggs_for_a_omelette)/box_eggs)
+tot_egg_box = math.ceil((num_of_omelette * eggs_for_a_omelette)/box_eggs)
 result = f"You can make {num_of_omelette} omelettes with {tot_egg_box} boxes of eggs"
 print(result)
